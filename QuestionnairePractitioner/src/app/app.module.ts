@@ -73,7 +73,7 @@ const appRoutes : Routes = [
     MatNativeDateModule,
     MatRadioModule,
     MatBadgeModule,
-    MatGridListModule
+    MatGridListModule,
     MatBadgeModule,
     MatTableModule,
     FormsModule 

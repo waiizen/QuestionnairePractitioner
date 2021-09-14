@@ -47,7 +47,7 @@ export class NewQuestionnaireComponent  {
     }
   
     addRowData(row_obj){
-      console.log("test");
+      
       var d = new Date();
       this.dataSource.push({
         id:d.getTime(),

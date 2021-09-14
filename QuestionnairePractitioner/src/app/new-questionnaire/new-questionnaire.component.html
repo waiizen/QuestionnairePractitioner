@@ -23,7 +23,7 @@
   
       <!-- Name Column -->
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <th mat-header-cell *matHeaderCellDef> Question </th>
         <td mat-cell *matCellDef="let element"> {{element.name}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
       </ng-container>
       
@@ -32,8 +32,8 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link"> 
-          <a (click)="openDialog('Update',element)">Edit</a> | 
-          <a (click)="openDialog('Delete',element)">Delete</a>  
+          <a (click)="openDialog('Update',element)">Editer</a> | 
+          <a (click)="openDialog('Delete',element)">Supprimer</a>  
         </td>
       </ng-container>
   
