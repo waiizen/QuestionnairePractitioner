@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewQuestionnaireComponent implements OnInit {
 
+  matDatepicker: Date;
+
   constructor() { }
 
   ngOnInit(): void {

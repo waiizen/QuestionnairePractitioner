@@ -1,1 +1,54 @@
-<p>new-questionnaire works!</p>
+<h2 mat-dialog-title>Nouveau questionnaire</h2>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Titre</mat-label>
+    <input required matInput>
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Date de création du questionnaire</mat-label>
+    <input required matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Quel est votre taux de glycémie ? (g/L)</mat-label>
+    <input required matInput type="number">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Quel est votre taux d'activité sportive par semaine ? (heures)</mat-label>
+    <input required matInput type="number">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Combien de crises d'hypoglycémies et d'hyperglycémie avez vous subit ce mois-ci ?</mat-label>
+    <input required matInput type="number">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 60%;">
+    <mat-label>Quel est votre poids ? (kg)</mat-label>
+    <input required matInput type="number">
+  </mat-form-field>
+  <br/>
+
+  <label>Prenez vous correctement votre traitement ? *</label><br/>
+  <mat-radio-group required aria-label="Prenez vous correctement votre traitement ?">
+    <mat-radio-button value="1">Oui</mat-radio-button>&nbsp;&nbsp;
+    <mat-radio-button value="2">Non</mat-radio-button>
+  </mat-radio-group>
+  <br/>
+  <br/>
+
+  <button mat-raised-button color="success" type="submit">Enregistrer</button>&nbsp;&nbsp;
+  <button mat-raised-button color="warning">Réinitialiser</button>
+</form>
+
+
