@@ -9,6 +9,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatDialogModule} from "@angular/material/dialog";
+import { MatTableModule } from '@angular/material/table';
 import {PopupInfoPractitioner} from "./Popup/popup-info-practitioner";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -24,6 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {PopupViewQuestionnaire} from "./Popup/popup-view-questionnaire";
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from "@angular/material/badge";
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -42,7 +45,8 @@ const appRoutes : Routes = [
     ManageQuestionnaireComponent,
     MyPatientComponent,
     HomeComponent,
-    PopupViewQuestionnaire
+    PopupViewQuestionnaire,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,9 @@ const appRoutes : Routes = [
     MatSelectModule,
     HttpClientModule,
     MatCardModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatTableModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

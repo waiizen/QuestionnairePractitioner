@@ -7,6 +7,8 @@ import {PopupInfoPractitioner} from "./Popup/popup-info-practitioner";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
   title = 'QuestionnairePractitioner';
 
