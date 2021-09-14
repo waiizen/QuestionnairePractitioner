@@ -19,6 +19,7 @@ import { NewQuestionnaireComponent } from './new-questionnaire/new-questionnaire
 import { ManageQuestionnaireComponent } from './manage-questionnaire/manage-questionnaire.component';
 import { MyPatientComponent } from './my-patient/my-patient.component';
 import { HomeComponent } from './home/home.component';
+import {MatSelectModule} from "@angular/material/select";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -50,7 +51,8 @@ const appRoutes : Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

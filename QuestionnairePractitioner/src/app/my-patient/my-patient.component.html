@@ -1,1 +1,8 @@
-<p>my-patient works!</p>
+<mat-form-field style="width: 100%;" appearance="fill">
+  <mat-label>Sélectionnez un patient</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let patient of patientList" [value]="patient.id">
+      {{patient.nom}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
