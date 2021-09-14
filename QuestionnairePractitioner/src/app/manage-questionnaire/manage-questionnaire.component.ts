@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {QuestionnaireService} from "../Services/questionnaire.service";
+import {Questionnaire} from "../Model/Questionnaire";
 
 @Component({
   selector: 'app-manage-questionnaire',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageQuestionnaireComponent implements OnInit {
 
-  constructor() { }
+  questionnaireList: Questionnaire[] = [];
+
+  constructor(private questionnaireService: QuestionnaireService) { }
 
   ngOnInit(): void {
+
   }
 
 }

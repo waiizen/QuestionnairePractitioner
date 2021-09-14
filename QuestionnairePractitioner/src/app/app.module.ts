@@ -20,6 +20,7 @@ import { ManageQuestionnaireComponent } from './manage-questionnaire/manage-ques
 import { MyPatientComponent } from './my-patient/my-patient.component';
 import { HomeComponent } from './home/home.component';
 import {MatSelectModule} from "@angular/material/select";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -52,7 +53,8 @@ const appRoutes : Routes = [
     MatInputModule,
     MatSidenavModule,
     RouterModule.forRoot(appRoutes),
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
