@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {QuestionnaireService} from "../Services/questionnaire.service";
 import {Questionnaire} from "../Model/Questionnaire";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {PopupViewQuestionnaire} from "../Popup/popup-view-questionnaire";
 
 @Component({
   selector: 'app-manage-questionnaire',
@@ -9,12 +11,10 @@ import {Questionnaire} from "../Model/Questionnaire";
 })
 export class ManageQuestionnaireComponent implements OnInit {
 
-  questionnaireList: Questionnaire[] = [];
-
-  constructor(private questionnaireService: QuestionnaireService) { }
+  constructor() { }
 
   ngOnInit(): void {
-
   }
+
 
 }

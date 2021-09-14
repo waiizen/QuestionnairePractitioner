@@ -4,5 +4,5 @@ export class Questionnaire{
   title: string;
   status: string;
   date: string;
-  item: Item;
+  item: Item[];
 }

@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Informations du questionnaire</h2>
+
+<form class="questionnaire-form">
+  <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+    <mat-label>Titre</mat-label>
+    <input readonly matInput [value]="currentQuestionnaire.title">
+  </mat-form-field><br/>
+
+  <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+    <mat-label>Statut</mat-label>
+    <input readonly matInput [value]="currentQuestionnaire.status">
+  </mat-form-field><br/>
+
+  <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+    <mat-label>Date</mat-label>
+    <input readonly matInput [value]="currentQuestionnaire.date">
+  </mat-form-field><br/>
+</form>
+
+<form class="questionnaire-items-form" *ngFor="let item of currentQuestItems" >
+  <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+    <mat-label>Question n°{{item.linkId}}</mat-label>
+    <input readonly matInput [value]="item.text">
+  </mat-form-field><br/>
+</form>
+
+<mat-dialog-actions>
+  <button mat-button color="accent" (click)="close()">Close</button>&nbsp;&nbsp;
+</mat-dialog-actions>

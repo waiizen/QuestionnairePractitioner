@@ -12,7 +12,6 @@ export class QuestionnaireService {
   constructor(private http: HttpClient) { }
 
   getAll(){
-    console.log("getAll");
     return this.http.get<Questionnaire[]>("https://fhir.eole-consulting.io/api/questionnaire");
   }
 

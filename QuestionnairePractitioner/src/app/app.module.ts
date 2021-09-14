@@ -21,6 +21,7 @@ import { MyPatientComponent } from './my-patient/my-patient.component';
 import { HomeComponent } from './home/home.component';
 import {MatSelectModule} from "@angular/material/select";
 import {HttpClientModule} from "@angular/common/http";
+import {PopupViewQuestionnaire} from "./Popup/popup-view-questionnaire";
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from "@angular/material/badge";
 
@@ -40,7 +41,8 @@ const appRoutes : Routes = [
     NewQuestionnaireComponent,
     ManageQuestionnaireComponent,
     MyPatientComponent,
-    HomeComponent
+    HomeComponent,
+    PopupViewQuestionnaire
   ],
   imports: [
     BrowserModule,
