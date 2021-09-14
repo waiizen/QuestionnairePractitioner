@@ -24,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {PopupViewQuestionnaire} from "./Popup/popup-view-questionnaire";
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from "@angular/material/badge";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -60,7 +61,8 @@ const appRoutes : Routes = [
     MatSelectModule,
     HttpClientModule,
     MatCardModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
