@@ -25,6 +25,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {PopupViewQuestionnaire} from "./Popup/popup-view-questionnaire";
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from "@angular/material/badge";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatRadioGroup, MatRadioModule} from "@angular/material/radio";
+import {MatGridListModule} from "@angular/material/grid-list";
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
 
@@ -65,10 +69,18 @@ const appRoutes : Routes = [
     HttpClientModule,
     MatCardModule,
     MatBadgeModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatBadgeModule,
+    MatGridListModule
+    MatBadgeModule,
     MatTableModule,
     FormsModule 
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
