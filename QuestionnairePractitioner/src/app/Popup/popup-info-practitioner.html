@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Mes informations</h2>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nom</mat-label>
+    <input readonly matInput value="Jankowiak">
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Prénom</mat-label>
+    <input readonly matInput value="Claire-Mathilde">
+  </mat-form-field><br/>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Rue</mat-label>
+    <input readonly matInput value="18 rue Bonne Mère" width="50%">
+  </mat-form-field>
+  &nbsp;
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Ville - CP</mat-label>
+    <input readonly matInput value="13000 - Marseille" width="50%">
+  </mat-form-field>
+</form>
+
+<mat-dialog-actions>
+  <button mat-button color="accent" (click)="close()">Close</button>&nbsp;&nbsp;
+</mat-dialog-actions>

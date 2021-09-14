@@ -1,30 +1,32 @@
-#iconMediLib{
+#iconMediLib {
   width: 5%;
 }
 
-.mat-toolbar{
+.mat-toolbar {
   color: #055e9f;
 }
 
-.mat-toolbar .title{
+.mat-toolbar .title {
   margin-left: 2%;
 }
 
-.mat-toolbar .icon{
+.mat-toolbar .icon {
   margin-left: 85%;
   font-size: 175%;
 }
 
-.mat-toolbar .icon:hover{
+.mat-toolbar .icon:hover {
   cursor: pointer;
 }
 
-#sidenav-container{
+#sidenav-container {
   height: 90%;
 }
 
-#sidenav-side{
+#sidenav-side {
   width: 15%;
   padding-left: 1%;
   padding-top: 3%;
 }
+
+/*# sourceMappingURL=app.component.css.map */
