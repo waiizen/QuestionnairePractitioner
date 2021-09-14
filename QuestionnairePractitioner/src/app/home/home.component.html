@@ -1,5 +1,8 @@
 <div *ngFor="let questionnaire of questionnaireList" >
-  {{questionnaire.title}}
-  {{questionnaire.status}}
-  {{questionnaire.date}}
+  <mat-card id="carte" matTooltip="status : {{questionnaire.status}} créé le : {{questionnaire.date}}" matTooltipPosition="right">
+    {{questionnaire.title}} <br>
+    <mat-icon [inline]="true">share</mat-icon>
+    <mat-icon [inline]="true">edit</mat-icon>
+    <mat-icon [inline]="true">delete</mat-icon>
+  </mat-card>
 </div>

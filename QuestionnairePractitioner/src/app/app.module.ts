@@ -21,6 +21,8 @@ import { MyPatientComponent } from './my-patient/my-patient.component';
 import { HomeComponent } from './home/home.component';
 import {MatSelectModule} from "@angular/material/select";
 import {HttpClientModule} from "@angular/common/http";
+import {MatCardModule} from '@angular/material/card';
+import {MatBadgeModule} from "@angular/material/badge";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -54,7 +56,9 @@ const appRoutes : Routes = [
     MatSidenavModule,
     RouterModule.forRoot(appRoutes),
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
