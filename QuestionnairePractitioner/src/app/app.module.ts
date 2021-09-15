@@ -33,6 +33,7 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DatePipe} from "@angular/common";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {PopupViewQuestionnaireResponse} from "./Popup/popup-view-questionnaire-response";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -52,7 +53,8 @@ const appRoutes : Routes = [
     MyPatientComponent,
     HomeComponent,
     PopupViewQuestionnaire,
-    DialogBoxComponent
+    DialogBoxComponent,
+    PopupViewQuestionnaireResponse
   ],
   imports: [
     BrowserModule,
