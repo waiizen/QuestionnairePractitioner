@@ -30,7 +30,9 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatRadioGroup, MatRadioModule} from "@angular/material/radio";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DatePipe} from "@angular/common";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -73,13 +75,16 @@ const appRoutes : Routes = [
     MatNativeDateModule,
     MatRadioModule,
     MatBadgeModule,
-    MatGridListModule
+    MatGridListModule,
     MatBadgeModule,
     MatTableModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [
-    MatDatepickerModule
+    MatDatepickerModule,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
