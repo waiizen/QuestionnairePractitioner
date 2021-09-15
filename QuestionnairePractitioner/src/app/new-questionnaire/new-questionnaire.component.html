@@ -29,8 +29,8 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link">
-          <a (click)="openDialog('Update',element)">Edit</a> |
-          <a (click)="openDialog('Delete',element)">Delete</a>
+          <a (click)="openDialog('Modifier',element)">Modifier</a> |
+          <a (click)="openDialog('Supprimer',element)">Supprimer</a>
         </td>
       </ng-container>
 
@@ -38,7 +38,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <br/>
-    <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Ajouter une question</button>
+    <button mat-button (click)="openDialog('Ajouter',{})" mat-flat-button color="primary">Ajouter une question</button>
 
     <br/><br/>
 

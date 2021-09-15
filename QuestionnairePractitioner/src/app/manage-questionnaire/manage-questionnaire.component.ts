@@ -3,7 +3,7 @@ import {QuestionnaireService} from "../Services/questionnaire.service";
 import {Questionnaire} from "../Model/Questionnaire";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {PopupViewQuestionnaire} from "../Popup/popup-view-questionnaire";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 import {PopupSendQuestionnaire} from "../Popup/popup-send-questionnaire";
 
 @Component({
@@ -48,7 +48,9 @@ export class ManageQuestionnaireComponent implements OnInit {
       () => {},
       (e) => {console.error(e);},
       () => {
-        this.snackBar.open('Questionnaire supprimé.');
+        let sbConfig = new MatSnackBarConfig();
+        sbConfig.duration = 3000;
+        this.snackBar.open('Questionnaire supprimé.',"", sbConfig)
         this.questionnaireList.splice(this.questionnaireList.findIndex( (obj) => {return obj.id == questionnaire.id} ), 1);
       }
     );

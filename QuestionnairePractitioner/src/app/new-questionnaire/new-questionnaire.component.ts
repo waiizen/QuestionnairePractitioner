@@ -7,7 +7,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {DatePipe} from "@angular/common";
 import {Item} from "../Model/Item";
 import {QuestionnaireService} from "../Services/questionnaire.service";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 
 export interface QuestionData {
   text: string;
@@ -51,16 +51,16 @@ export class NewQuestionnaireComponent implements OnInit {
     openDialog(action,obj) {
       obj.action = action;
       const dialogRef = this.dialog.open(DialogBoxComponent, {
-        width: '250px',
+        width: '400px',
         data:obj
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        if(result.event == 'Add'){
+        if(result.event == 'Ajouter'){
           this.addRowData(result.data);
-        }else if(result.event == 'Update'){
+        }else if(result.event == 'Modifier'){
           this.updateRowData(result.data);
-        }else if(result.event == 'Delete'){
+        }else if(result.event == 'Supprimer'){
           this.deleteRowData(result.data);
         }
       });
@@ -115,7 +115,11 @@ export class NewQuestionnaireComponent implements OnInit {
       this.questionnaireService.createQuestionnaire(newQuestionnaire).subscribe(
         (elt) => {},
         (e) => console.error(e),
-        () => this.snackBar.open('Questionnaire enregistré.')
+        () => {
+          let sbConfig = new MatSnackBarConfig();
+          sbConfig.duration = 3000;
+          this.snackBar.open('Questionnaire enregistré.',"", sbConfig)
+        }
       );
   }
 

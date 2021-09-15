@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {PatientService} from "../Services/patient.service";
 import {QuestionnaireService} from "../Services/questionnaire.service";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 
 export interface DialogData{
   name: string;
@@ -49,7 +49,9 @@ export class PopupSendQuestionnaire implements OnInit{
       () => {},
       (e) => {console.error(e)},
       () => {
-        this.snackBar.open('Questionnaire envoyé.');
+        let sbConfig = new MatSnackBarConfig();
+        sbConfig.duration = 3000;
+        this.snackBar.open('Questionnaire envoyé.',"", sbConfig)
         window.location.reload();
       }
   );
