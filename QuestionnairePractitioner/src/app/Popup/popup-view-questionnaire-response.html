@@ -1,0 +1,31 @@
+<div id="all" style="height: 90vh;" >
+  <h2 mat-dialog-title>Réponses questionnaire</h2>
+
+  <form class="questionnaire-form">
+    <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+      <mat-label>Titre</mat-label>
+      <input readonly matInput [value]="currentQuestionnaire.subject.reference">
+    </mat-form-field><br/>
+
+    <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+      <mat-label>Statut</mat-label>
+      <input readonly matInput [value]="currentQuestionnaire.status">
+    </mat-form-field><br/>
+
+    <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+      <mat-label>Date de réponse</mat-label>
+      <input readonly matInput [value]="currentQuestionnaire.authored">
+    </mat-form-field><br/>
+  </form>
+
+  <form class="questionnaire-items-form" *ngFor="let item of currentQuestItems" >
+    <mat-form-field style="width: 100%;" class="example-full-width" appearance="fill">
+      <mat-label>{{item.text}}</mat-label>
+      <input readonly matInput [value]="item.answer[0].valueString">
+    </mat-form-field><br/>
+  </form>
+
+  <mat-dialog-actions>
+    <button mat-button color="accent" (click)="close()">Close</button>&nbsp;&nbsp;
+  </mat-dialog-actions>
+</div>
