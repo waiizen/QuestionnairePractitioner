@@ -22,19 +22,15 @@
       </ng-container>
 
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Question</th>
-        <td mat-cell *matCellDef="let element"> {{element.text}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef> Action</th>
+        <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element" class="action-link">
-          <a (click)="openDialog('Update',element)">
-            <mat-icon matTooltip="Editer">edit</mat-icon>
-          </a>&nbsp;&nbsp;
-          <a (click)="openDialog('Delete',element)">
-            <mat-icon matTooltip="Supprimer">delete</mat-icon>
-          </a>
+          <a (click)="openDialog('Update',element)">Edit</a> |
+          <a (click)="openDialog('Delete',element)">Delete</a>
         </td>
       </ng-container>
 

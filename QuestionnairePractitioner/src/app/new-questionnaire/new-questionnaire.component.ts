@@ -67,6 +67,8 @@ export class NewQuestionnaireComponent implements OnInit {
     }
 
     addRowData(row_obj){
+      console.log("test");
+      var d = new Date();
       this.dataSource.push({
         linkId:this.newQuestionId.toString(),
         text:row_obj.text,
