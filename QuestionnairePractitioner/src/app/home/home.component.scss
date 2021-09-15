@@ -1,6 +1,19 @@
 .mat-card{
-  width:70%;
+  width:60%;
 }
+
+.mat-drawer-content{
+  //background-image: url("../../assets/fond.jpg");
+  //background-color: #3f51b5;
+}
+
+img{
+  width: 50%;
+  align: center;
+  display: block;
+  margin: 5px auto;
+}
+
 mat-icon{
   color : #3f51b5;
   font-size: 25px !important;
@@ -24,9 +37,9 @@ mat-icon{
 }
 
 #titre{
-  margin-bottom: 50px;
   text-align: center;
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .mat-card:hover{
