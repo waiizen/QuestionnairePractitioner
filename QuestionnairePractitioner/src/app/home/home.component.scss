@@ -19,6 +19,11 @@ mat-icon{
 #b1{
   text-align: left;
   width: 33%;
+  color: lightgreen;
+}
+
+#b1:hover, #b2:hover, #b3:hover{
+  cursor: pointer;
 }
 
 #b2{
@@ -31,6 +36,7 @@ mat-icon{
 #b3{
   text-align: right;
   width: 33%;
+  color: red;
 }
 
 #titre{
