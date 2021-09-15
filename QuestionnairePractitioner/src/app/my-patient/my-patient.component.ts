@@ -5,11 +5,13 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {PopupViewQuestionnaire} from "../Popup/popup-view-questionnaire";
 import {PopupViewQuestionnaireResponse} from "../Popup/popup-view-questionnaire-response";
 import {QuestionnaireService} from "../Services/questionnaire.service";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-my-patient',
   templateUrl: './my-patient.component.html',
-  styleUrls: ['./my-patient.component.scss']
+  styleUrls: ['./my-patient.component.scss'],
+  providers: [DatePipe]
 })
 export class MyPatientComponent implements OnInit {
 
@@ -19,7 +21,8 @@ export class MyPatientComponent implements OnInit {
 
   constructor(private patientService: PatientService,
               private questionnaireRespService: QuestionnaireResponseService,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog,
+              public datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.patientService.getAll().subscribe(

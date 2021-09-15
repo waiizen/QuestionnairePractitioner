@@ -11,10 +11,11 @@
 <mat-grid-list cols="2" rowHeight="2:1" *ngIf="toShow" >
   <mat-grid-tile *ngFor="let questionnaire of questionnaireRespList" >
     <mat-card id="carte"
-              matTooltip="Statut : {{questionnaire.status}}, Rempli le : {{questionnaire.authored}}"
+              matTooltip="Statut : {{questionnaire.status}}"
               matTooltipPosition="right"
               (click)="openQuestionnaire(questionnaire)">
-      <div id="titre"> {{questionnaire.subject.reference}}TITRE ICI <br> </div>
+      <div id="titre"> {{questionnaire.subject.reference}}<br> </div>
+      <img src="../../assets/questionnaire.png">
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
