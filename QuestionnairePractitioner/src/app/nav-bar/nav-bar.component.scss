@@ -1,4 +1,13 @@
 .btnLink{
-  width: 90%!important;
+  width: 97%!important;
   min-width: unset!important;
+}
+
+.btnLink:hover{
+  transform: scale(0.95);
+}
+
+mat-icon{
+  padding-bottom: 2px;
+  margin-right: 3px;
 }
