@@ -67,7 +67,6 @@ export class NewQuestionnaireComponent implements OnInit {
     }
 
     addRowData(row_obj){
-      console.log("test");
       var d = new Date();
       this.dataSource.push({
         linkId:this.newQuestionId.toString(),
@@ -96,10 +95,7 @@ export class NewQuestionnaireComponent implements OnInit {
 
 
   submit(){
-      console.log(this.dataSource);
-      console.log(this.newQuestForm.value.titre)
       let dateTransform =this.datePipe.transform(this.newQuestForm.value.date, 'yyyy-MM-dd');
-      console.log(dateTransform);
       this.createQuestionnaire(this.newQuestForm.value.titre, dateTransform, this.dataSource);
   }
 
@@ -116,7 +112,6 @@ export class NewQuestionnaireComponent implements OnInit {
           "date": date,
           "item": items
         };
-      console.log(newQuestionnaire);
       this.questionnaireService.createQuestionnaire(newQuestionnaire).subscribe(
         (elt) => {},
         (e) => console.error(e),
