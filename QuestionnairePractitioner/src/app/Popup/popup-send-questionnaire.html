@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Envoyer le questionnaire</h2>
+
+<mat-form-field style="width: 100%;" appearance="fill">
+  <mat-label>Sélectionnez un patient</mat-label>
+  <mat-select (selectionChange)="selectPatient($event)" >
+    <mat-option *ngFor="let patient of patientList" [value]="patient.id">
+      {{patient.name[0].given[1]}} {{patient.name[0].given[0]}}   {{patient.name[0].family}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-dialog-actions>
+  <button mat-button color="accent" (click)="close()">Close</button>&nbsp;&nbsp;
+  <button mat-raised-button color="success" [disabled]="!choixPatient" (click)="submit(currentQuestionnaire)">Enregistrer</button>
+</mat-dialog-actions>

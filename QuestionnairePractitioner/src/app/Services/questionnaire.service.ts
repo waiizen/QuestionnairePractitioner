@@ -26,4 +26,10 @@ export class QuestionnaireService {
     return this.http.delete(this.url + "/" + questionnaire.id);
   }
 
+  put(questionnaire): Observable<any>{
+    const headers = { 'content-type': 'application/json'};
+    const body = JSON.stringify(questionnaire);
+    return this.http.put(this.url + "/" + questionnaire.id,body,{'headers':headers , observe: 'response'});
+  }
+
 }

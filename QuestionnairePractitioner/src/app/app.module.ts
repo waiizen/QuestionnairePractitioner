@@ -34,6 +34,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DatePipe} from "@angular/common";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {PopupViewQuestionnaireResponse} from "./Popup/popup-view-questionnaire-response";
+import {PopupSendQuestionnaire} from "./Popup/popup-send-questionnaire";
 
 const appRoutes : Routes = [
   {path: '', component: HomeComponent},
@@ -54,7 +55,8 @@ const appRoutes : Routes = [
     HomeComponent,
     PopupViewQuestionnaire,
     DialogBoxComponent,
-    PopupViewQuestionnaireResponse
+    PopupViewQuestionnaireResponse,
+    PopupSendQuestionnaire
   ],
   imports: [
     BrowserModule,
