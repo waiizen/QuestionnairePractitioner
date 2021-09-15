@@ -1,3 +1,14 @@
+img {
+  width: 20%;
+  align: center;
+  display: block;
+  margin: 5px auto;
+}
 
+#titre {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=my-patient.component.css.map */

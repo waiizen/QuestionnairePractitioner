@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"my-patient.component.css"}
+{"version":3,"sourceRoot":"","sources":["my-patient.component.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA","file":"my-patient.component.css"}
