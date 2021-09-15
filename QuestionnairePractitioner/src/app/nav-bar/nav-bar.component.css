@@ -3,4 +3,13 @@
   min-width: unset !important;
 }
 
+.btnLink:hover {
+  transform: scale(0.95);
+}
+
+mat-icon {
+  padding-bottom: 2px;
+  margin-right: 8px;
+}
+
 /*# sourceMappingURL=nav-bar.component.css.map */
