@@ -22,4 +22,8 @@ export class QuestionnaireService {
     return this.http.post(this.url,body,{'headers':headers , observe: 'response'});
   }
 
+  delete(questionnaire): Observable<any>{
+    return this.http.delete(this.url + "/" + questionnaire.id);
+  }
+
 }

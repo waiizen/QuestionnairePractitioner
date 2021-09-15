@@ -4,14 +4,15 @@
 
       <mat-card id="carte"
                 matTooltip="statut : {{questionnaire.status}} créé le : {{questionnaire.date}}"
-                matTooltipPosition="right"
-                (click)="openQuestionnaire(questionnaire)">
-        <div id="titre"> {{questionnaire.title}} <br> </div>
+                matTooltipPosition="right">
+        <div id="mat-card-contenu" (click)="openQuestionnaire(questionnaire)">
+          <div id="titre"> {{questionnaire.title}} <br> </div>
 
-        <img src="../../assets/questionnaire.png">
+          <img src="../../assets/questionnaire.png">
+        </div>
         <mat-icon title="Envoyer" id="b1" [inline]="true">send</mat-icon>
         <mat-icon title="Modifier" id="b2" [inline]="true">edit</mat-icon>
-        <mat-icon title="Supprimer" id="b3" [inline]="true">delete</mat-icon>
+        <mat-icon title="Supprimer" id="b3" [inline]="true" (click)="deleteQuestionnaire(questionnaire)" >delete</mat-icon>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

@@ -5,4 +5,5 @@ export class Questionnaire{
   status: string;
   date: string;
   item: Item[];
+  id: string;
 }
