@@ -1,16 +1,19 @@
-<mat-grid-list cols="3" rowHeight="3:2">
-  <mat-grid-tile *ngFor="let questionnaire of questionnaireList" >
+<div id="bg">
+  <mat-grid-list cols="3" rowHeight="3:2">
+    <mat-grid-tile *ngFor="let questionnaire of questionnaireList" >
 
-    <mat-card id="carte"
-              matTooltip="statut : {{questionnaire.status}} créé le : {{questionnaire.date}}"
-              matTooltipPosition="right"
-              (click)="openQuestionnaire(questionnaire)">
-      <div id="titre"> {{questionnaire.title}} <br> </div>
+      <mat-card id="carte"
+                matTooltip="statut : {{questionnaire.status}} créé le : {{questionnaire.date}}"
+                matTooltipPosition="right"
+                (click)="openQuestionnaire(questionnaire)">
+        <div id="titre"> {{questionnaire.title}} <br> </div>
 
-      <img src="../../assets/questionnaire.png">
-      <mat-icon id="b1" [inline]="true">send</mat-icon>
-      <mat-icon id="b2" [inline]="true">edit</mat-icon>
-      <mat-icon id="b3" [inline]="true">delete</mat-icon>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+        <img src="../../assets/questionnaire.png">
+        <mat-icon id="b1" [inline]="true">send</mat-icon>
+        <mat-icon id="b2" [inline]="true">edit</mat-icon>
+        <mat-icon id="b3" [inline]="true">delete</mat-icon>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
